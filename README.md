@@ -23,7 +23,7 @@ Coroutine: Implemented asynchronous programming using Kotlin Coroutines, enablin
 
 # Weather Data Retrieval:
 
-Users can input a specific date and year for the desired weather data.
+Users can input a specific date (YYYY-MM-DD) for the desired weather data.
 The app fetches historical weather data using a free weather API in JSON format.
 The JSON response is parsed to extract the maximum and minimum temperatures for the specified date.
 # Database Integration:
