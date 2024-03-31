@@ -119,10 +119,7 @@ fun WeatherForecastScreen(
                     modifier = Modifier
                         .offset(
 
-                        )
-//                        .background(color = Color(0xff726ff9)) // Set inner color of button
-//                        .border(width = 1.dp, color = Color.White, shape = RoundedCornerShape(23.dp)), // Set white color outline
-                ) {
+                        )) {
                     Text(text = "DD", color = Color.White) // Set text color to white
                 }
 
@@ -177,9 +174,6 @@ fun WeatherForecastScreen(
                     } else {
                         errorMessage = "Invalid country name"
                     }
-//                    latitude= countryList[countryName]?.first ?: 0.0
-//                    longitude= countryList[countryName]?.second?: 0.0
-//                    viewModel.updateDataset(latitude,longitude,date,context )
                 }
             ) {
                 Text("Submit")
@@ -221,7 +215,7 @@ fun WeatherForecastScreen(
                                 .width(100.dp)
                                 .padding(20.dp)
                         ) {
-                            Text(text = "Min:  ${viewModel.min.value}",modifier = Modifier.padding(18.dp))
+                            Text(text = "Min: ${String.format("%.2f", viewModel.min.value)}",modifier = Modifier.padding(18.dp))
                         }
                         Spacer(modifier = Modifier.height(16.dp))
                         Card(
@@ -231,7 +225,7 @@ fun WeatherForecastScreen(
                                 .width(100.dp)
                                 .padding(20.dp)
                         ) {
-                            Text(text = "Max:  ${viewModel.max.value}",modifier = Modifier.padding(18.dp))
+                            Text(text = "Max:  ${String.format("%.2f",viewModel.max.value)}",modifier = Modifier.padding(18.dp))
                         }
                     }
                 }
